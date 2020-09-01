@@ -1,0 +1,60 @@
+@import "../../global/Colors.module.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__Container {
+  width: 20%;
+}
+.footer__list {
+  text-align: left;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.footer__link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 0;
+  position: relative;
+  color: $secondary-color;
+}
+.footer__link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: $secondary-color;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.footer__link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.footer__imageContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footerImage {
+  height: 70px;
+}
+
+.footerIcons {
+  height: 40px;
+  transition: 0.3s;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  &:hover {
+    background: rgb(255, 255, 255);
+    transition: 0.3s;
+  }
+}

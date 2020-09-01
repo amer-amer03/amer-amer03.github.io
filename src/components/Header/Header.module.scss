@@ -1,0 +1,116 @@
+@import "../../global/Colors.module.scss";
+@import "../../global/Fonts.module.scss";
+
+.headerTop {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  align-items: center;
+}
+.signIn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.5s;
+  padding-right: 20px;
+
+  color: rgb(131, 131, 131);
+  &:hover {
+    color: black;
+    transition: 0.5s;
+  }
+}
+.signOutButton {
+  background: none;
+  border: none;
+  font-family: "SecondaryFont";
+  font-size: 16px;
+  transition: 0.5s;
+  padding-right: 20px;
+
+  &:hover {
+    color: rgb(131, 131, 131);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}
+.headerBottom {
+  font-family: "SecondaryFont";
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  input {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  .headerContainer {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 20px;
+  }
+  .headerContainer_nav {
+    padding-left: 5%;
+    flex-grow: 1;
+  }
+  .logoText {
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+  .iconContainer {
+    height: 30px;
+    padding: 8px;
+  }
+
+  .logo {
+    height: 100%;
+  }
+  .icon {
+    height: 100%;
+  }
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+  flex-grow: 1;
+}
+.nav__link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 25px;
+  position: relative;
+  color: $secondary-color;
+}
+.nav__link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: $secondary-color;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav__link:hover:after {
+  width: 100%;
+  left: 0;
+}

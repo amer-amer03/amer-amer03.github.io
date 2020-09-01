@@ -1,0 +1,18 @@
+@import "../../../global/Colors.module.scss";
+
+.catalogue {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.gridContainer {
+  display: grid;
+  padding: 5px;
+  text-align: center;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(3, 40vh);
+  grid-template-areas:
+    "a b c"
+    "a b c"
+    "d d d";
+}

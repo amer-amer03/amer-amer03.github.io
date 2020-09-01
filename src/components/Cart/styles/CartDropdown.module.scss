@@ -1,0 +1,30 @@
+@import "../../../global/Colors.module.scss";
+
+.cartDropdown {
+  position: absolute;
+  width: 300px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid black;
+  background-color: white;
+  top: 45px;
+  right: 20px;
+  z-index: 5;
+
+  .cartDropdown__items {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  .cartDropdown__emptyMessage {
+    font-size: 18px;
+    margin: 50px auto;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
+}

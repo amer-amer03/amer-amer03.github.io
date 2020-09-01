@@ -1,0 +1,8 @@
+@import "./global/Fonts.module.scss";
+@import "./global/Colors.module.scss";
+
+body {
+  margin: 0 auto;
+  font-family: "SecondaryFont";
+  color: $secondary-color;
+}

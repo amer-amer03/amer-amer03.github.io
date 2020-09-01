@@ -1,0 +1,45 @@
+.collectionItem {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px;
+
+  .collectionItem__image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+  }
+  .collectionItem__footer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    position: relative;
+
+    .collectionItem__name {
+      width: 90%;
+      margin-bottom: 15px;
+    }
+    .collectionItem__price {
+      width: 10%;
+    }
+  }
+  .collectionItem__button {
+    background: yellow;
+  }
+  .collectionItem__popup {
+    font-size: 18px;
+    background: rgb(231, 231, 231);
+    color: black;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+}

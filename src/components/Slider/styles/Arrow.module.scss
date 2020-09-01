@@ -1,0 +1,49 @@
+.arrow__ContainerLeft {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  transition: transform ease-in 0.1s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  .arrow__image {
+    width: 35px;
+    transform: translateX(-3px);
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+.arrow__ContainerRight {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  transition: transform ease-in 0.1s;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  .arrow__image {
+    width: 35px;
+    transform: translateX(3px);
+    &:focus {
+      outline: 0;
+    }
+  }
+}
