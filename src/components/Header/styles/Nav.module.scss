@@ -1,0 +1,56 @@
+@import "../../../assets/colors/Colors.module.scss";
+@import "../../../assets//fonts/Fonts.module.scss";
+
+.nav {
+  padding-left: 5%;
+  flex-grow: 1;
+  .nav__list {
+    display: flex;
+    list-style: none;
+    flex-grow: 1;
+  }
+  .nav__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 0px 20px;
+    font-family: "navFont";
+    display: inline-block;
+    position: relative;
+    color: $secondary-color;
+  }
+  .nav__link:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: $secondary-color;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .nav__link:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav__list {
+    z-index: 1;
+    background: rgb(26, 54, 89);
+    flex-flow: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: transform 0.3s ease-in;
+    .nav__link {
+      color: white;
+    }
+  }
+  .nav__list_open {
+    transform: translateX(100%);
+  }
+}

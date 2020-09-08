@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/index.module.scss";
+import classes from "./styles/index.module.scss";
 
 const Slide = ({ content }) => {
   return (
@@ -12,7 +12,7 @@ const Slide = ({ content }) => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
-      className={styles.slide}
+      className={classes.slide}
     ></div>
   );
 };

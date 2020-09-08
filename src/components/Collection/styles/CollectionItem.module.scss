@@ -21,8 +21,11 @@
     justify-content: space-between;
     font-size: 18px;
     position: relative;
-
-    .collectionItem__name {
+    & .collectionItem__title {
+      width: 90%;
+      margin-bottom: 15px;
+    }
+    .collectionItem__subtitle {
       width: 90%;
       margin-bottom: 15px;
     }
@@ -30,9 +33,7 @@
       width: 10%;
     }
   }
-  .collectionItem__button {
-    background: yellow;
-  }
+
   .collectionItem__popup {
     font-size: 18px;
     background: rgb(231, 231, 231);

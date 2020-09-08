@@ -4,59 +4,60 @@ import { useParams } from "react-router-dom";
 import CollectionItem from "../../components/Collection/CollectionItem";
 import {
   selectCollection,
-  selectCollections,
   selectCollectionsPreview,
 } from "../../store/shop/selectors";
 import { sortCollectionsByValue } from "../../store/shop/actions";
-import styles from "./CollectionPage.module.scss";
+import classes from "./CollectionPage.module.scss";
 import PropTypes from "prop-types";
 
 const CollectionPage = () => {
   const { collectionId } = useParams();
   const collection = useSelector(selectCollection(collectionId));
-  const collections = useSelector(selectCollections);
-  const collectionsPreview = useSelector(selectCollectionsPreview);
-  console.log(collectionsPreview);
 
   const dispatch = useDispatch();
   const handleClickSort = () => {
-    if (collection) dispatch(sortCollectionsByValue(collections));
-
-    console.log(dispatch(sortCollectionsByValue(collections)));
+    dispatch(sortCollectionsByValue(collectionId));
   };
 
-  return collection ? (
-    <div className={styles.collectionPage}>
-      <h2 className={styles.collectionPage__title}> {collection.title}</h2>
-      <div>
-        Sort by
-        <select>
-          <option value="price_high_low">Price: High-low</option>
-          <option value="price_low_high">Price: Low-High</option>
-        </select>
-      </div>
-      <div className={styles.collectionPage__items}>
-        {collection.items.map((item) => {
-          return (
-            <CollectionItem
-              key={item.id}
-              id={item.id}
-              name={item.name}
-              price={item.price}
-              imageUrl={item.imageUrl}
-            />
-          );
-        })}
-      </div>
-    </div>
-  ) : null;
+  return (
+    <>
+      {collection && (
+        <div className={classes.collectionPage}>
+          <h2 className={classes.collectionPage__title}>{collection.title}</h2>
+          <div onClick={handleClickSort}>Sort</div>
+          <div>
+            Sort by
+            <select>
+              <option value="price_high_low">Price: High-low</option>
+              <option value="price_low_high">Price: Low-High</option>
+            </select>
+          </div>
+          <div className={classes.collectionPage__items}>
+            {Object.keys(collection.items).map((item) => {
+              return (
+                <CollectionItem
+                  key={collection.items[item].id}
+                  id={collection.items[item].id}
+                  title={collection.items[item].title}
+                  subtitle={collection.items[item].subtitle}
+                  price={collection.items[item].price}
+                  imageUrl={collection.items[item].imageUrl}
+                />
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </>
+  );
 };
 
-export default CollectionPage;
-
 CollectionItem.propTypes = {
-  id: PropTypes.number,
-  name: PropTypes.string,
+  id: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
   price: PropTypes.number,
   imageUrl: PropTypes.string,
 };
+
+export default CollectionPage;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SliderContent from "./SliderContent";
 import Arrow from "./Arrow";
 import Dots from "./Dots";
-import styles from "./styles/index.module.scss";
+import classes from "./styles/index.module.scss";
 import { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
@@ -109,7 +109,7 @@ const Slider = () => {
   };
 
   return (
-    <div className={styles.slider}>
+    <div className={classes.slider}>
       <SliderContent
         slides={slides}
         translate={translate}
@@ -123,8 +123,6 @@ const Slider = () => {
   );
 };
 
-export default Slider;
-
 SliderContent.propTypes = {
   slides: PropTypes.array,
   translate: PropTypes.number,
@@ -135,3 +133,5 @@ Arrow.propTypes = {
   nextSlide: PropTypes.func,
   prevSlide: PropTypes.func,
 };
+
+export default Slider;

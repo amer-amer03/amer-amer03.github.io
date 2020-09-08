@@ -1,14 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import CollectionPreview from "./CollectionPreview";
-import styles from "./styles/Collection.module.scss";
-import { selectCollectionsPreview } from "../../store/shop/selectors";
+import classes from "./styles/Collection.module.scss";
+import { selectCollectionsCategory } from "../../store/shop/selectors";
 import PropTypes from "prop-types";
 const Collection = () => {
-  const collectionsPreview = useSelector(selectCollectionsPreview);
-
+  const CollectionsCategory = useSelector(selectCollectionsCategory);
   return (
-    <div className={styles.collection}>
+    <div className={classes.collection}>
       {collectionsPreview.map((item) => {
         return (
           <CollectionPreview
@@ -23,10 +22,10 @@ const Collection = () => {
   );
 };
 
-export default Collection;
-
 CollectionPreview.propTypes = {
   title: PropTypes.string,
   items: PropTypes.string,
   routeName: PropTypes.string,
 };
+
+export default Collection;

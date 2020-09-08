@@ -5,12 +5,13 @@
 
 .collectionPage__title {
   font-size: 38px;
-  margin: 0 auto 30px;
+  margin: 0 auto;
 }
 
 .collectionPage__items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   & .collectionPage__item {
     margin-bottom: 30px;
   }

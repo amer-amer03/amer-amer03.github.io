@@ -1,0 +1,22 @@
+.itemDescription {
+  display: flex;
+}
+.itemDescription__imageContainer {
+  width: 75%;
+  flex-wrap: wrap;
+  display: flex;
+}
+.itemDescription__image {
+  flex-wrap: wrap;
+  width: 45%;
+  padding: 5px;
+}
+.itemDescription__popup {
+  font-size: 18px;
+  background: rgb(231, 231, 231);
+  color: black;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}

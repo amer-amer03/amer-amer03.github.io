@@ -1,11 +1,11 @@
 import React from "react";
 import Slider from "../../components/Slider/Slider";
 import Catalogue from "../../components/Catalogue/Catalogue";
-import styles from "./HomePage.module.scss";
+import classes from "./HomePage.module.scss";
 
 const HomePage = () => {
   return (
-    <div className={styles.homePage}>
+    <div className={classes.homePage}>
       <div>
         <Slider />
       </div>

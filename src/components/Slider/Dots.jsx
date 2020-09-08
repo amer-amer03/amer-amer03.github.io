@@ -1,11 +1,11 @@
 import React from "react";
 import Dot from "./Dot";
-import styles from "./styles/index.module.scss";
+import classes from "./styles/index.module.scss";
 import PropTypes from "prop-types";
 
 const Dots = ({ images, activeSlide }) => {
   return (
-    <div className={styles.dots}>
+    <div className={classes.dots}>
       {images.map((image, i) => (
         <Dot key={image} active={activeSlide === i} />
       ))}
@@ -13,8 +13,8 @@ const Dots = ({ images, activeSlide }) => {
   );
 };
 
-export default Dots;
-
 Dot.propTypes = {
   active: PropTypes.bool,
 };
+
+export default Dots;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Input from "../../components/Input/Input";
 import Button from "../Button/Button";
-import styles from "./SignIn.module.scss";
+import classes from "./SignIn.module.scss";
 import { signInWithGoogle, auth } from "../../firebase/firebase";
 
 const SignIn = () => {
@@ -15,9 +15,12 @@ const SignIn = () => {
   };
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setState({
-      ...state,
-      [name]: value,
+
+    setState((prevState) => {
+      return {
+        ...prevState,
+        [name]: value,
+      };
     });
   };
 
@@ -40,7 +43,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className={styles.signIn}>
+    <div className={classes.signIn}>
       <h2>I already have an account</h2>
       <span> Sign in with your email and password </span>
 
@@ -62,7 +65,7 @@ const SignIn = () => {
           handleChange={handleChange}
           label="password"
         />
-        <div className={styles.signIn__Button}>
+        <div className={classes.signIn__Button}>
           <Button type="submit">Sign In</Button>
         </div>
         <Button color="blue" type="button" onClick={handleSignInWithGoogle}>

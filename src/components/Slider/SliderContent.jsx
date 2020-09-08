@@ -21,8 +21,8 @@ const SliderContent = ({ translate, transition, width, slides }) => {
   );
 };
 
-export default SliderContent;
-
 Slide.propTypes = {
   content: PropTypes.string,
 };
+
+export default SliderContent;

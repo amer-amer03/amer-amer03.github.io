@@ -1,31 +1,30 @@
 import React, { useState } from "react";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
-import styles from "./SignUp.module.scss";
+import classes from "./SignUp.module.scss";
 import { auth, createUserProfileDocument } from "../../firebase/firebase";
 
+const defaultFormValues = {
+  email: "",
+  password: "",
+  displayName: "",
+  confirmPassword: "",
+};
+
 const SignUp = () => {
-  const [state, setState] = useState({
-    email: "",
-    password: "",
-    displayName: "",
-    confirmPassword: "",
-  });
+  const [state, setState] = useState(defaultFormValues);
 
   const clearForm = () => {
-    setState({
-      email: "",
-      password: "",
-      displayName: "",
-      confirmPassword: "",
-    });
+    setState(defaultFormValues);
   };
 
   const handleChange = (event) => {
     const { value, name } = event.target;
-    setState({
-      ...state,
-      [name]: value,
+    setState((prevState) => {
+      return {
+        ...prevState,
+        [name]: value,
+      };
     });
   };
   const { displayName, email, password, confirmPassword } = state;
@@ -49,7 +48,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className={styles.signUp}>
+    <div className={classes.signUp}>
       <h2> I do not have an account </h2>
       <span> Sign up with your email and password </span>
       <form onSubmit={handleSubmit}>

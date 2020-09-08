@@ -9,6 +9,7 @@ import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
 import Footer from "./components/Footer/Footer";
 import SignInPage from "./pages/SignInPage/SignInPage";
 import CollectionPage from "./pages/CollectionPage/CollectionPage";
+import CollectionItemDescriptionPage from "./pages/CollectionItemDescriptionPage/CollectionItemDescriptionPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import { selectIsPending } from "./store/shop/selectors";
 import { fetchCollections } from "./store/shop/actions";
@@ -23,9 +24,9 @@ const App = () => {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchCollections());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchCollections());
+  // }, [dispatch]);
 
   const currentUser = useSelector(selectCurrentUser);
 
@@ -63,6 +64,9 @@ const App = () => {
         </Route>
         <Route path="/about">
           <AboutUsPage />
+        </Route>
+        <Route path={`/:collectionId/:itemId`}>
+          <CollectionItemDescriptionPage isLoading={IsPending} />
         </Route>
         <Route path={`/:collectionId`}>
           <CollectionPageWithSpinner isLoading={IsPending} />

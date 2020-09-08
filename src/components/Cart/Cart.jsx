@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactComponent as CartIcon } from "../../assets/icons/cart_icon.svg";
 import CartDropdown from "./CartDropdown";
-import styles from "./styles/index.module.scss";
+import classes from "./styles/index.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCartHidden } from "../../store/cart/actions";
 import {
@@ -19,9 +19,9 @@ const Cart = () => {
   };
   return (
     <>
-      <button className={styles.cart} onClick={toggleCart}>
-        <CartIcon className={styles.cart__icon} />
-        <span className={styles.cart__itemCount}>{cartItemsQuantity}</span>
+      <button className={classes.cart} onClick={toggleCart}>
+        <CartIcon className={classes.cart__icon} />
+        <span className={classes.cart__itemCount}>{cartItemsQuantity}</span>
       </button>
       {!isCartDropdownHidden && <CartDropdown />}
     </>
