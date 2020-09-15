@@ -45,12 +45,12 @@ export const fetchCollections = () => {
   };
 };
 
-export const sortCollectionsByValue = (collectionName, sortOrder) => {
+export const sortCollectionsByValue = (collectionId, sortOrder) => {
   return {
     type: SORT_COLLECTION_BY_VALUE,
     payload: {
+      collectionId,
       sortOrder,
-      collectionName,
     },
   };
 };
