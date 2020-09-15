@@ -21,7 +21,9 @@ const Cart = () => {
     <>
       <button className={classes.cart} onClick={toggleCart}>
         <CartIcon className={classes.cart__icon} />
-        <span className={classes.cart__itemCount}>{cartItemsQuantity}</span>
+        {cartItemsQuantity !== 0 && (
+          <span className={classes.cart__itemCount}>{cartItemsQuantity}</span>
+        )}
       </button>
       {!isCartDropdownHidden && <CartDropdown />}
     </>
