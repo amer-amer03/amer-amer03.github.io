@@ -41,8 +41,8 @@ const CheckoutPage = () => {
   );
 };
 
-export default CheckoutPage;
-
 CheckoutItem.propTypes = {
   item: PropTypes.object,
 };
+
+export default CheckoutPage;
