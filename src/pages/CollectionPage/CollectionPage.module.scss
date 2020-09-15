@@ -1,11 +1,14 @@
 .collectionPage {
+  max-width: 1920px;
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
 }
 
 .collectionPage__title {
   font-size: 38px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .collectionPage__items {
