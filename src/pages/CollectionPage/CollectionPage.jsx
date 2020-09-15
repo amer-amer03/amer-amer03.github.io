@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import CollectionItem from "../../components/Collection/CollectionItem";
 import {
   selectCollection,
+  selectCollections,
   selectCollectionsPreview,
 } from "../../store/shop/selectors";
 import { sortCollectionsByValue } from "../../store/shop/actions";
@@ -12,24 +13,26 @@ import PropTypes from "prop-types";
 
 const CollectionPage = () => {
   const { collectionId } = useParams();
+  const dispatch = useDispatch();
+
   const collection = useSelector(selectCollection(collectionId));
 
-  const dispatch = useDispatch();
-  const handleClickSort = () => {
-    dispatch(sortCollectionsByValue(collectionId));
+  const handleSortByValue = (e) => {
+    dispatch(sortCollectionsByValue(collectionId, e.target.value));
   };
-
   return (
     <>
       {collection && (
         <div className={classes.collectionPage}>
           <h2 className={classes.collectionPage__title}>{collection.title}</h2>
-          <div onClick={handleClickSort}>Sort</div>
           <div>
             Sort by
-            <select>
-              <option value="price_high_low">Price: High-low</option>
-              <option value="price_low_high">Price: Low-High</option>
+            <select onChange={handleSortByValue}>
+              <option selected disabled value="sort">
+                Sort By
+              </option>
+              <option value="des">Price: High-low</option>
+              <option value="asc">Price: Low-High</option>
             </select>
           </div>
           <div className={classes.collectionPage__items}>
@@ -42,6 +45,7 @@ const CollectionPage = () => {
                   subtitle={collection.items[item].subtitle}
                   price={collection.items[item].price}
                   imageUrl={collection.items[item].imageUrl}
+                  collectionId={collectionId}
                 />
               );
             })}
