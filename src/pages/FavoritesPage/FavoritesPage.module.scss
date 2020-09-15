@@ -1,0 +1,19 @@
+.favoritesPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.favoritesPage__title {
+  font-size: 38px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.favoritesPage__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  & .collectionPage__item {
+    margin-bottom: 30px;
+  }
+}
