@@ -6,13 +6,12 @@
   cursor: pointer;
   background: none;
   border: none;
-
   outline: none;
 }
 
 .cart__icon {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
 }
 
 .cart__itemCount {
@@ -20,6 +19,7 @@
   font-size: 12px;
   font-weight: bold;
   color: white;
+  text-align: center;
   background: #d62977;
   padding: 2px;
   border-radius: 50%;
