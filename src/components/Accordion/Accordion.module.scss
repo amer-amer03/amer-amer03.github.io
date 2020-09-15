@@ -1,0 +1,48 @@
+@import "../../assets/colors/Colors.module.scss";
+
+.itemDescription__infoSize {
+  max-height: 0;
+  transition: 0.2s;
+  overflow: hidden;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(-135deg);
+  margin: 5px;
+  padding: 3px;
+  transition: 0.2s;
+}
+.arrow_down {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(-135deg);
+  padding: 3px;
+  transform: rotate(45deg);
+  margin: 5px;
+  transition: 0.2s;
+}
+.buttonClassName {
+  font-weight: 400;
+
+  border-radius: 0px;
+  padding: 0px 10px;
+  text-align: left;
+  display: block;
+  background: none;
+  color: black;
+  font-size: 20px;
+  margin: 10px 0px;
+  &:hover {
+    background: none;
+  }
+  .accordion {
+    display: flex;
+    padding: 10px 0px;
+    border-bottom: 1px solid $border-color;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
