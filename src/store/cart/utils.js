@@ -1,7 +1,3 @@
-export const removeCartItem = (allCartItems, currentCartItem) => {
-  return allCartItems.filter((cartItem) => cartItem.id !== currentCartItem.id);
-};
-
 export const increaseCartItemQuantity = (allCartItems, currentCartItem) => {
   let updatedItems = [];
   const itemExist = allCartItems.find((cartItem) => {
@@ -18,6 +14,10 @@ export const increaseCartItemQuantity = (allCartItems, currentCartItem) => {
   }
 
   return updatedItems;
+};
+
+export const removeCartItem = (allCartItems, currentCartItem) => {
+  return allCartItems.filter((cartItem) => cartItem.id !== currentCartItem.id);
 };
 
 export const decreaseCartItemQuantity = (allCartItems, currentCartItem) => {
