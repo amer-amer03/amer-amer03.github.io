@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Switch, Route, Redirect } from "react-router-dom";
 import "./App.module.scss";
@@ -11,6 +11,7 @@ import SignInPage from "./pages/SignInPage/SignInPage";
 import CollectionPage from "./pages/CollectionPage/CollectionPage";
 import CollectionItemDescriptionPage from "./pages/CollectionItemDescriptionPage/CollectionItemDescriptionPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
+import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
 import { selectIsPending } from "./store/shop/selectors";
 import { fetchCollections } from "./store/shop/actions";
 import { withSpinner } from "./hoc/withSpinner";
@@ -64,6 +65,9 @@ const App = () => {
         </Route>
         <Route path="/about">
           <AboutUsPage />
+        </Route>
+        <Route path="/favorite">
+          <FavoritesPage />
         </Route>
         <Route path={`/:collectionId/:itemId`}>
           <CollectionItemDescriptionPage isLoading={IsPending} />
