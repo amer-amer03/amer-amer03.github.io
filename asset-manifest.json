@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-shop/static/css/main.e6d3446a.chunk.css",
-    "main.js": "/react-shop/static/js/main.bf86b43b.chunk.js",
-    "main.js.map": "/react-shop/static/js/main.bf86b43b.chunk.js.map",
+    "main.css": "/react-shop/static/css/main.3a6d1c49.chunk.css",
+    "main.js": "/react-shop/static/js/main.cfbb6a79.chunk.js",
+    "main.js.map": "/react-shop/static/js/main.cfbb6a79.chunk.js.map",
     "runtime-main.js": "/react-shop/static/js/runtime-main.dd7e6540.js",
     "runtime-main.js.map": "/react-shop/static/js/runtime-main.dd7e6540.js.map",
     "static/js/2.764d8052.chunk.js": "/react-shop/static/js/2.764d8052.chunk.js",
     "static/js/2.764d8052.chunk.js.map": "/react-shop/static/js/2.764d8052.chunk.js.map",
     "index.html": "/react-shop/index.html",
-    "precache-manifest.2a8118425cb99ecdf29330f136c33b05.js": "/react-shop/precache-manifest.2a8118425cb99ecdf29330f136c33b05.js",
+    "precache-manifest.4d3d889c2d87d96f36e9871124655d2d.js": "/react-shop/precache-manifest.4d3d889c2d87d96f36e9871124655d2d.js",
     "service-worker.js": "/react-shop/service-worker.js",
-    "static/css/main.e6d3446a.chunk.css.map": "/react-shop/static/css/main.e6d3446a.chunk.css.map",
+    "static/css/main.3a6d1c49.chunk.css.map": "/react-shop/static/css/main.3a6d1c49.chunk.css.map",
     "static/js/2.764d8052.chunk.js.LICENSE.txt": "/react-shop/static/js/2.764d8052.chunk.js.LICENSE.txt",
     "static/media/App.module.scss": "/react-shop/static/media/Roboto-Regular.11eabca2.ttf",
     "static/media/adidas-img.png": "/react-shop/static/media/adidas-img.fc513ba6.png",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.dd7e6540.js",
     "static/js/2.764d8052.chunk.js",
-    "static/css/main.e6d3446a.chunk.css",
-    "static/js/main.bf86b43b.chunk.js"
+    "static/css/main.3a6d1c49.chunk.css",
+    "static/js/main.cfbb6a79.chunk.js"
   ]
 }
