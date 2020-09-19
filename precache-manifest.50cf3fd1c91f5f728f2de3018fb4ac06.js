@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "002fdf291a96f245e5d5c98292e7178c",
+    "revision": "834fcfa3135ab504b27390cd81319b62",
     "url": "/react-shop/index.html"
   },
   {
-    "revision": "33ae36971937f729650e",
-    "url": "/react-shop/static/css/main.3a6d1c49.chunk.css"
+    "revision": "ec9ea951eea7486ad7df",
+    "url": "/react-shop/static/css/main.3b60a3f5.chunk.css"
   },
   {
-    "revision": "5f1a01201fd92e58ea63",
-    "url": "/react-shop/static/js/2.a369a5c7.chunk.js"
+    "revision": "96ac58bbfd44287de0b5",
+    "url": "/react-shop/static/js/2.08c1f154.chunk.js"
   },
   {
     "revision": "7bfaa32b315fe466d84ab2ae49052d17",
-    "url": "/react-shop/static/js/2.a369a5c7.chunk.js.LICENSE.txt"
+    "url": "/react-shop/static/js/2.08c1f154.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "33ae36971937f729650e",
-    "url": "/react-shop/static/js/main.455d1be3.chunk.js"
+    "revision": "ec9ea951eea7486ad7df",
+    "url": "/react-shop/static/js/main.426eb626.chunk.js"
   },
   {
     "revision": "626ec3ec678d8049003d",
@@ -56,15 +56,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-shop/static/media/instagram_icon.bb026c4d.svg"
   },
   {
-    "revision": "6c9efe0c8c1fb630cd48d0381ece4297",
-    "url": "/react-shop/static/media/left_arrow.6c9efe0c.svg"
-  },
-  {
     "revision": "5aec495c6e920fe94cfcd8e9ad8a452b",
     "url": "/react-shop/static/media/nike-img.5aec495c.png"
-  },
-  {
-    "revision": "be237328d9c252b1b9133a02c3be3e5e",
-    "url": "/react-shop/static/media/right_arrow.be237328.svg"
   }
 ]);
