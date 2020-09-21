@@ -4,7 +4,6 @@ import { useRouteMatch, Link } from "react-router-dom";
 
 const CatalogueItem = ({ title, imageUrl, gridArea, linkUrl }) => {
   const { path } = useRouteMatch();
-  console.log(path);
   return (
     <Link
       to={`${path}${linkUrl}`}
