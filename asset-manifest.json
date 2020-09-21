@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "/react-shop/static/css/main.08d30c0e.chunk.css",
-    "main.js": "/react-shop/static/js/main.366b8858.chunk.js",
-    "main.js.map": "/react-shop/static/js/main.366b8858.chunk.js.map",
+    "main.css": "/react-shop/static/css/main.30e23070.chunk.css",
+    "main.js": "/react-shop/static/js/main.99ded642.chunk.js",
+    "main.js.map": "/react-shop/static/js/main.99ded642.chunk.js.map",
     "runtime-main.js": "/react-shop/static/js/runtime-main.dd7e6540.js",
     "runtime-main.js.map": "/react-shop/static/js/runtime-main.dd7e6540.js.map",
-    "static/js/2.08c1f154.chunk.js": "/react-shop/static/js/2.08c1f154.chunk.js",
-    "static/js/2.08c1f154.chunk.js.map": "/react-shop/static/js/2.08c1f154.chunk.js.map",
+    "static/js/2.5169bab5.chunk.js": "/react-shop/static/js/2.5169bab5.chunk.js",
+    "static/js/2.5169bab5.chunk.js.map": "/react-shop/static/js/2.5169bab5.chunk.js.map",
     "index.html": "/react-shop/index.html",
-    "precache-manifest.1198516a23cbb9a7ed8dc4868ee5c72d.js": "/react-shop/precache-manifest.1198516a23cbb9a7ed8dc4868ee5c72d.js",
+    "precache-manifest.95c15db3ea63a051afaaa3fbd067989e.js": "/react-shop/precache-manifest.95c15db3ea63a051afaaa3fbd067989e.js",
     "service-worker.js": "/react-shop/service-worker.js",
-    "static/css/main.08d30c0e.chunk.css.map": "/react-shop/static/css/main.08d30c0e.chunk.css.map",
-    "static/js/2.08c1f154.chunk.js.LICENSE.txt": "/react-shop/static/js/2.08c1f154.chunk.js.LICENSE.txt",
+    "static/css/main.30e23070.chunk.css.map": "/react-shop/static/css/main.30e23070.chunk.css.map",
+    "static/js/2.5169bab5.chunk.js.LICENSE.txt": "/react-shop/static/js/2.5169bab5.chunk.js.LICENSE.txt",
     "static/media/App.module.scss": "/react-shop/static/media/Roboto-Regular.11eabca2.ttf",
     "static/media/adidas-img.png": "/react-shop/static/media/adidas-img.fc513ba6.png",
     "static/media/cart_icon.3f0a6a83.svg": "/react-shop/static/media/cart_icon.3f0a6a83.svg",
     "static/media/converse-img.png": "/react-shop/static/media/converse-img.b97fdecc.png",
     "static/media/facebook_icon.svg": "/react-shop/static/media/facebook_icon.03878ec2.svg",
     "static/media/instagram_icon.svg": "/react-shop/static/media/instagram_icon.bb026c4d.svg",
+    "static/media/next.svg": "/react-shop/static/media/next.bdfc0fe5.svg",
     "static/media/nike-img.png": "/react-shop/static/media/nike-img.5aec495c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.dd7e6540.js",
-    "static/js/2.08c1f154.chunk.js",
-    "static/css/main.08d30c0e.chunk.css",
-    "static/js/main.366b8858.chunk.js"
+    "static/js/2.5169bab5.chunk.js",
+    "static/css/main.30e23070.chunk.css",
+    "static/js/main.99ded642.chunk.js"
   ]
 }
