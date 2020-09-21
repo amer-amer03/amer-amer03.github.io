@@ -3,7 +3,8 @@
 .headerTop {
   display: flex;
   justify-content: flex-end;
-  padding: 0px 20px;
+  margin: 0 auto;
+  padding: 0px 25px;
   align-items: center;
 }
 .signIn {
@@ -35,6 +36,8 @@
   }
 }
 .headerBottom {
+  padding: 0px 25px;
+  margin: 0 auto;
   font-family: "SecondaryFont";
   font-size: 16px;
   display: flex;
@@ -45,24 +48,8 @@
     padding: 6px;
     margin-top: 8px;
     font-size: 17px;
-    border: none;
   }
-  .search-container button {
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-  }
-  .headerContainer {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    padding: 20px;
-  }
+
   .headerContainer_nav {
     padding-left: 5%;
     flex-grow: 1;
@@ -133,4 +120,10 @@
   height: 14px;
   top: 11px;
   left: 28px;
+}
+
+@media (max-width: 1120px) {
+  .headerTop {
+    justify-content: flex-start;
+  }
 }
