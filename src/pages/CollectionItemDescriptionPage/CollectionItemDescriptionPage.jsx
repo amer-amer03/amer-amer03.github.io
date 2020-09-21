@@ -1,17 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import CollectionItemDescription from "../../components/CollectionItemDescription/CollectionItemDescription";
-import { selectCollections } from "../../store/shop/selectors";
+import CollectionItemDescription from "../../components/Collection/CollectionItemDescription";
+import { selectAllCollections } from "../../store/shop/selectors";
 import { useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import classes from "./CollectionItemDescriptionPage.module.scss";
 
 const CollectionItemDescriptionPage = () => {
-  const collections = useSelector(selectCollections);
+  const collections = useSelector(selectAllCollections);
   const itemId = useParams().itemId;
   const collectionId = useParams().collectionId;
-
-  console.log(collections[collectionId].items[itemId]);
 
   return (
     <div className={classes.CollectionItemDescriptionPage}>
