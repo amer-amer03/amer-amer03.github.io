@@ -3,49 +3,74 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import CollectionItem from "../../components/Collection/CollectionItem";
 import {
-  selectCollection,
-  selectCollections,
-  selectCollectionsPreview,
+  selectCollectionCategory,
+  selectCollectionCategoryArray,
 } from "../../store/shop/selectors";
+
 import { sortCollectionsByValue } from "../../store/shop/actions";
 import classes from "./CollectionPage.module.scss";
 import PropTypes from "prop-types";
 
 const CollectionPage = () => {
-  const { collectionId } = useParams();
   const dispatch = useDispatch();
 
-  const collection = useSelector(selectCollection(collectionId));
+  const { collectionId } = useParams();
+
+  const collection = useSelector(selectCollectionCategory(collectionId));
+
+  const collectionArr = useSelector(
+    selectCollectionCategoryArray(collection.items)
+  );
 
   const handleSortByValue = (e) => {
     dispatch(sortCollectionsByValue(collectionId, e.target.value));
   };
+
   return (
     <>
       {collection && (
         <div className={classes.collectionPage}>
-          <h2 className={classes.collectionPage__title}>{collection.title}</h2>
-          <div>
-            Sort by
-            <select onChange={handleSortByValue}>
-              <option selected disabled value="sort">
-                Sort By
-              </option>
-              <option value="des">Price: High-low</option>
-              <option value="asc">Price: Low-High</option>
-            </select>
+          <div className={classes.collectionPage__titleContainer}>
+            <h2 className={classes.collectionPage__title}>
+              {collection.title}
+            </h2>
+            <div className={classes.collectionPage__selectContainer}>
+              <select
+                className={classes.collectionPage__select}
+                onChange={handleSortByValue}
+              >
+                <option
+                  className={classes.collectionPage__selectOption}
+                  value="sel"
+                >
+                  Sort By
+                </option>
+                <option
+                  className={classes.collectionPage__selectOption}
+                  value="des"
+                >
+                  Price: High-low
+                </option>
+                <option
+                  className={classes.collectionPage__selectOption}
+                  value="asc"
+                >
+                  Price: Low-High
+                </option>
+              </select>
+            </div>
           </div>
           <div className={classes.collectionPage__items}>
-            {Object.keys(collection.items).map((item) => {
+            {collectionArr.map((item) => {
               return (
                 <CollectionItem
-                  key={collection.items[item].id}
-                  id={collection.items[item].id}
-                  title={collection.items[item].title}
-                  subtitle={collection.items[item].subtitle}
-                  price={collection.items[item].price}
-                  imageUrl={collection.items[item].imageUrl}
-                  collectionId={collectionId}
+                  key={item.id}
+                  id={item.id}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                  price={item.price}
+                  imageUrl={item.imageUrl}
+                  collectionId={item.collectionId}
                 />
               );
             })}
