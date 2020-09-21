@@ -25,7 +25,7 @@ const CheckoutItem = ({ item }) => {
       <div className={classes.checkoutItem__imageContainer}>
         <img src={item.imageUrl} alt={item.name} />
       </div>
-      <span className={classes.checkoutItem__name}>{item.name}</span>
+      <span className={classes.checkoutItem__name}>{item.title}</span>
       <span className={classes.checkoutItem__quantity}>
         <button
           onClick={handleDecreaseItem}
