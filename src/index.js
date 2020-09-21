@@ -8,6 +8,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { store, persistor } from "./store/store";
 import ScrollToTop from "./ScrollToTop";
+import ErrorHandling from "./ErrorBoundary";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,7 +16,9 @@ ReactDOM.render(
       <Router>
         <ScrollToTop />
         <PersistGate persistor={persistor}>
-          <App />
+          <ErrorHandling>
+            <App />
+          </ErrorHandling>
         </PersistGate>
       </Router>
     </Provider>
