@@ -43,6 +43,7 @@ const SignUp = () => {
       await createUserProfileDocument(user, { displayName: displayName });
       clearForm();
     } catch (error) {
+      alert(error);
       console.log(error);
     }
   };
