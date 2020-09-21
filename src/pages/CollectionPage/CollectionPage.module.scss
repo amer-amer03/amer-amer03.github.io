@@ -1,14 +1,16 @@
 .collectionPage {
-  max-width: 1920px;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
 }
-
+.collectionPage__titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 48px;
+}
 .collectionPage__title {
-  font-size: 38px;
-  margin: 0 auto;
-  padding: 20px;
+  font-size: 24px;
 }
 
 .collectionPage__items {
@@ -17,5 +19,18 @@
   justify-content: center;
   & .collectionPage__item {
     margin-bottom: 30px;
+  }
+}
+.collectionPage__selectContainer {
+  border: none;
+  font-size: 18px;
+
+  .collectionPage__select {
+    border: none;
+    font-size: 18px;
+
+    :first-child {
+      display: none;
+    }
   }
 }
