@@ -1,8 +1,8 @@
 @import "../../../assets/colors/Colors.module.scss";
 
 .catalogue {
-  width: 90%;
-  margin: 20px auto;
+  padding: 25px;
+  margin: 0px auto;
 }
 
 .gridContainer {
@@ -16,4 +16,20 @@
     "a a b b c c"
     "d d d e e e"
     "d d d e e e";
+}
+
+@media (max-width: 500px) {
+  .gridContainer {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, 300px);
+    grid-template-areas:
+      "a a"
+      "b b"
+      "c c"
+      "d d"
+      "e e";
+  }
+  .catalogue {
+    padding: 0px;
+  }
 }
