@@ -46,4 +46,8 @@ const Accordion = ({ title, children }) => {
   );
 };
 
+Accordion.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 export default Accordion;
