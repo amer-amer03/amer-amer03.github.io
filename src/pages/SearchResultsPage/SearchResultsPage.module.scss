@@ -1,0 +1,34 @@
+.searchResultsPage {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.searchResultsPage__titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 48px;
+}
+.searchResultsPage__title {
+  font-size: 24px;
+}
+
+.searchResultsPage__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  & .searchResultsPage__item {
+    margin-bottom: 30px;
+  }
+}
+.searchResultsPage__selectContainer {
+  border: none;
+  font-size: 18px;
+  .searchResultsPage__select {
+    border: none;
+    font-size: 18px;
+    :first-child {
+      display: none;
+    }
+  }
+}
