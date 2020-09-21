@@ -38,6 +38,7 @@ const SignIn = () => {
       await auth.signInWithEmailAndPassword(email, password);
       clearForm();
     } catch (error) {
+      alert(error);
       console.log(error);
     }
   };
@@ -56,7 +57,6 @@ const SignIn = () => {
           handleChange={handleChange}
           label="Email"
         />
-
         <Input
           type="password"
           name="password"
