@@ -3,16 +3,21 @@
   position: absolute;
   top: 50%;
   left: 2%;
-  height: 50px;
-  width: 50px;
+  height: 38px;
+  width: 38px;
+  border: none;
+  outline: none;
+  color: black;
+  background: white;
   justify-content: center;
-  background: rgb(255, 255, 255);
   border-radius: 50%;
   cursor: pointer;
   align-items: center;
-  transition: transform ease-in 0.1s;
+  transition: 0.2s;
+
   &:hover {
-    transform: scale(1.1);
+    transition: 0.2s;
+    background: rgb(228, 228, 228);
   }
   .arrow__image {
     width: 35px;
@@ -27,23 +32,26 @@
   position: absolute;
   top: 50%;
   right: 2%;
-  height: 50px;
-  width: 50px;
+  height: 38px;
+  width: 38px;
+  outline: none;
   justify-content: center;
+  border: none;
+  color: black;
   background: white;
   border-radius: 50%;
   cursor: pointer;
   align-items: center;
-  transition: transform ease-in 0.1s;
+  transition: 0.2s;
   &:hover {
-    transform: scale(1.1);
+    transition: 0.2s;
+    background: rgb(228, 228, 228);
   }
-
-  .arrow__image {
-    width: 35px;
-    transform: translateX(3px);
-    &:focus {
-      outline: 0;
-    }
-  }
+}
+.arrow__arrowIconLeft {
+  width: 100%;
+  transform: rotate(180deg);
+}
+.arrow__arrowIconRight {
+  width: 100%;
 }
