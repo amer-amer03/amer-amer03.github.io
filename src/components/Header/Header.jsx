@@ -4,7 +4,8 @@ import { auth } from "../../firebase/firebase";
 import { useSelector } from "react-redux";
 import { selectCurrentUser } from "../../store/user/selectors";
 import Cart from "../Cart/Cart";
-import Burger from "./Burger";
+import Search from "../Search/Search";
+import BurgerNav from "./BurgerNav";
 import classes from "./styles/index.module.scss";
 import { selectFavoriteItemsQuantity } from "../../store/favorite/selectors";
 
@@ -43,13 +44,14 @@ const Header = () => {
         <div className={classes.headerContainer}>
           <div className={classes.logoContainer}></div>
           <div className={classes.logoContainer}>
-            <Link to={`/`} className={classes.logoText}>
+            <Link to={`/`} replace className={classes.logoText}>
               urban wear
             </Link>
           </div>
         </div>
 
-        <Burger />
+        <BurgerNav />
+        <Search />
       </div>
     </header>
   );
