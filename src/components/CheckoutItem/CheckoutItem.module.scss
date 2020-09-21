@@ -9,7 +9,7 @@
 
   .checkoutItem__imageContainer {
     width: 23%;
-    padding-right: 15px;
+    padding-right: 10px;
 
     img {
       width: 100%;
@@ -33,10 +33,22 @@
 
   .checkoutItem__quantityArrow {
     cursor: pointer;
+    font-size: 15px;
+    border: none;
   }
 
   .checkoutItem__removeButton {
-    padding-left: 12px;
+    border: none;
     cursor: pointer;
+  }
+}
+@media (max-width: 600px) {
+  .checkoutItem {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .checkoutItem {
+    font-size: 14px;
   }
 }
