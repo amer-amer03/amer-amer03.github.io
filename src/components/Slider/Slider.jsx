@@ -8,14 +8,7 @@ import PropTypes from "prop-types";
 
 const getWidth = () => window.innerWidth;
 
-const Slider = () => {
-  const images = [
-    "https://i.imgur.com/rDznWXr.jpg",
-    "https://i.imgur.com/u8hgTTv.jpg",
-    "https://i.imgur.com/gB5YmGx.jpg",
-    "https://i.imgur.com/0mmUYV2.jpg",
-  ];
-
+const Slider = ({ images, autoPlay }) => {
   const firstSlide = images[0];
   const secondSlide = images[1];
   const lastSlide = images[images.length - 1];
@@ -29,20 +22,20 @@ const Slider = () => {
 
   const { translate, transition, activeSlide, slides } = state;
 
-  // const autoPlayRef = useRef();
+  const autoPlayRef = useRef();
   const transitionRef = useRef();
   const resizeRef = useRef();
 
   useEffect(() => {
-    // autoPlayRef.current = nextSlide;
+    autoPlayRef.current = nextSlide;
     transitionRef.current = smoothTransition;
     resizeRef.current = handleResize;
   });
 
   useEffect(() => {
-    // const play = () => {
-    //   autoPlayRef.current();
-    // };
+    const play = () => {
+      autoPlayRef.current();
+    };
     const smooth = (e) => {
       if (e.target.className.includes("SliderContent")) {
         transitionRef.current();
@@ -57,17 +50,18 @@ const Slider = () => {
 
     const onResize = window.addEventListener("resize", resize);
 
-    // let interval = null;
-
-    // interval = setInterval(play, 10 * 1000);
-
+    let interval = null;
+    if (autoPlay) {
+      interval = setInterval(play, autoPlay * 1000);
+    }
     return () => {
       window.removeEventListener("transitionend", transitionEnd);
       window.removeEventListener("resize", onResize);
-
-      // clearInterval(interval);
+      if (autoPlay) {
+        clearInterval(interval);
+      }
     };
-  }, []);
+  }, [autoPlay]);
 
   useEffect(() => {
     if (transition === 0) setState({ ...state, transition: 0.45 });
