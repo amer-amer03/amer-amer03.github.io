@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Switch, Route, Redirect } from "react-router-dom";
 import "./App.module.scss";
@@ -12,6 +12,13 @@ import CollectionPage from "./pages/CollectionPage/CollectionPage";
 import CollectionItemDescriptionPage from "./pages/CollectionItemDescriptionPage/CollectionItemDescriptionPage";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
 import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
+import SearchResultsPage from "./pages/SearchResultsPage/SearchResultsPage";
+import CareersPage from "./pages/CareersPage/CareersPage";
+import StoreLocationsPage from "./pages/StoreLocationsPage/StoreLocationsPage";
+import PaymentPage from "./pages/PaymentPage/PaymentPage";
+import ReturnPolicyPage from "./pages/ReturnPolicyPage/ReturnPolicyPage";
+import ShippingPage from "./pages/ShippingPage/ShippingPage";
+
 import { selectIsPending } from "./store/shop/selectors";
 import { fetchCollections } from "./store/shop/actions";
 import { withSpinner } from "./hoc/withSpinner";
@@ -20,17 +27,18 @@ import { selectCurrentUser } from "./store/user/selectors";
 
 const App = () => {
   const CollectionPageWithSpinner = withSpinner(CollectionPage);
+  const CollectionItemDescriptionPageWithSpinner = withSpinner(
+    CollectionItemDescriptionPage
+  );
 
   const IsPending = useSelector(selectIsPending);
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(fetchCollections());
-  // }, [dispatch]);
-
+  useEffect(() => {
+    dispatch(fetchCollections());
+  }, [dispatch]);
   const currentUser = useSelector(selectCurrentUser);
-
   let unsubsribeFromAuth = useRef(null);
 
   useEffect(() => {
@@ -69,8 +77,26 @@ const App = () => {
         <Route path="/favorite">
           <FavoritesPage />
         </Route>
+        <Route path="/results">
+          <SearchResultsPage />
+        </Route>
+        <Route path="/careers">
+          <CareersPage />
+        </Route>
+        <Route path="/storelocations">
+          <StoreLocationsPage />
+        </Route>
+        <Route path="/payment">
+          <PaymentPage />
+        </Route>
+        <Route path="/returnpolicy">
+          <ReturnPolicyPage />
+        </Route>
+        <Route path="/shipping">
+          <ShippingPage />
+        </Route>
         <Route path={`/:collectionId/:itemId`}>
-          <CollectionItemDescriptionPage isLoading={IsPending} />
+          <CollectionItemDescriptionPageWithSpinner isLoading={IsPending} />
         </Route>
         <Route path={`/:collectionId`}>
           <CollectionPageWithSpinner isLoading={IsPending} />
