@@ -1,25 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import LeftArrow from "../../assets/icons/left_arrow.svg";
-import RightArrow from "../../assets/icons/right_arrow.svg";
 import classes from "./styles/index.module.scss";
+import ArrowIcon from "../../assets/icons/next.svg";
 
 const Arrow = ({ prevSlide, nextSlide }) => {
   return (
     <div className={classes.arrows__Container}>
       <button onClick={prevSlide} className={classes.arrow__ContainerLeft}>
-        <img
-          className={classes.arrow__image}
-          src={LeftArrow}
-          alt="Left Arrow"
-        />
+        <img className={classes.arrow__arrowIconLeft} src={ArrowIcon} alt="" />
       </button>
       <button onClick={nextSlide} className={classes.arrow__ContainerRight}>
-        <img
-          className={classes.arrow__image}
-          src={RightArrow}
-          alt="Right Arrow"
-        />
+        <img className={classes.arrow__arrowIconRight} src={ArrowIcon} alt="" />
       </button>
     </div>
   );
