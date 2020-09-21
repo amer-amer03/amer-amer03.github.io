@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import CheckoutItem from "../../components/CheckoutItem/CheckoutItem";
+import Button from "../../components/Button/Button";
+
 import classes from "./CheckoutPage.module.scss";
 import {
   selectCartItems,
@@ -37,6 +39,7 @@ const CheckoutPage = () => {
       <div className={classes.checkoutPage__total}>
         {`Total: $${cartItemsTotalPrice.toFixed(2)}`}
       </div>
+      <Button>Finalize purchase</Button>
     </div>
   );
 };
