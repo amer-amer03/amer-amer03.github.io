@@ -11,7 +11,7 @@
   background-color: white;
   top: 45px;
   right: 20px;
-  z-index: 5;
+  z-index: 6;
 
   .cartDropdown__items {
     display: flex;
@@ -26,5 +26,10 @@
 
   .button {
     margin-top: 10px;
+  }
+}
+@media (max-width: 1120px) {
+  .cartDropdown {
+    left: 20px;
   }
 }
