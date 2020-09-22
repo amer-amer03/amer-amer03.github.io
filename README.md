@@ -1,4 +1,4 @@
-Deployed project can be foud here - https://amer-amer03.github.io/react-shop/#/
+Deployed project can be found here - https://amer-amer03.github.io/react-shop/#/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
