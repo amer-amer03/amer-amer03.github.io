@@ -31,7 +31,7 @@ export const fetchCollections = () => {
   return (dispatch) => {
     dispatch(fetchCollectionsPending());
 
-    const collectionRef = firestore.collection("collection");
+    const collectionRef = firestore.collection("collections");
 
     collectionRef
       .get()
