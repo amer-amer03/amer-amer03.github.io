@@ -1,15 +1,14 @@
 export const convertCollections = (collections) => {
   const converted = collections.docs.map((doc) => {
-    const { title, items } = doc.data();
+    const { title, items, id } = doc.data();
     return {
       title,
       items,
-      routeName: encodeURI(title.toLowerCase()),
-      id: doc.id,
+      id,
     };
   });
   return converted.reduce((acc, collection) => {
-    acc[collection.title.toLowerCase()] = collection;
+    acc[collection.id.toLowerCase()] = collection;
     return acc;
   }, {});
 };
