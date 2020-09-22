@@ -9,10 +9,11 @@ const initialState = {
   collections: {
     women: {
       id: "women",
-      title: "Women",
+      title: "Women's Clothing",
       items: {
         item1: {
           id: "item1",
+          collectionId: "women",
           title: "Nike Sportswear Windrunner",
           subtitle: "Women's Jacket",
           imageUrl: "https://i.imgur.com/6ZbHKIr.jpg",
@@ -30,6 +31,7 @@ const initialState = {
         },
         item2: {
           id: "item2",
+          collectionId: "women",
           title: "Nike Sportswear Gym Vintage",
           subtitle: "Women's Shorts",
           imageUrl: "https://i.imgur.com/Uvkn7oO.jpg",
@@ -47,6 +49,7 @@ const initialState = {
         },
         item3: {
           id: "item3",
+          collectionId: "women",
           title: "Nike Sportswear NSW",
           subtitle: "Women's Crew",
           imageUrl: "https://i.imgur.com/1w4AGiq.jpg",
@@ -63,6 +66,7 @@ const initialState = {
         },
         item4: {
           id: "item4",
+          collectionId: "women",
           title: "Nike Sportswear Heritage",
           subtitle: "Womens's Short-Sleeve Top",
           imageUrl: "https://i.imgur.com/TTcdshu.jpg",
@@ -79,6 +83,7 @@ const initialState = {
         },
         item5: {
           id: "item5",
+          collectionId: "women",
           title: "Nike Air",
           subtitle: "Women's Bodysuit",
           imageUrl: "https://i.imgur.com/ynYgmOP.jpg",
@@ -95,6 +100,7 @@ const initialState = {
         },
         item6: {
           id: "item6",
+          collectionId: "women",
           title: "Nike Sportswear Swoosh",
           subtitle: "Women's Trousers",
           imageUrl: "https://i.imgur.com/mdps8Fd.jpg",
@@ -112,6 +118,7 @@ const initialState = {
         },
         item7: {
           id: "item7",
+          collectionId: "women",
           title: "Nike Sportswear Tech Fleece Windrunner",
           subtitle: " Women's Full-Zip Hoodie ",
           imageUrl: "https://i.imgur.com/kXUcjgS.jpg",
@@ -129,6 +136,7 @@ const initialState = {
         },
         item8: {
           id: "item8",
+          collectionId: "women",
           title: "Nike Sportwear Tech Fleece",
           subtitle: " Women's Trousers ",
           imageUrl: "https://i.imgur.com/K5ErfNc.jpg",
@@ -144,6 +152,7 @@ const initialState = {
         },
         item9: {
           id: "item9",
+          collectionId: "women",
           title: "Nike Sportswear Down-Fill",
           subtitle: "Women's Windrunner Jacket",
           imageUrl: "https://i.imgur.com/rS8aFgG.jpg",
@@ -160,6 +169,7 @@ const initialState = {
         },
         item10: {
           id: "item10",
+          collectionId: "women",
           title: "Jordan Utility",
           subtitle: "Women's Flight Suit",
           imageUrl: "https://i.imgur.com/MeAVawv.jpg",
@@ -179,10 +189,11 @@ const initialState = {
     },
     men: {
       id: "men",
-      title: "Men",
+      title: "Men's Clothing",
       items: {
         item11: {
           id: "item11",
+          collectionId: "men",
           title: "Nike Sportswear",
           subtitle: "Men's Short-Sleeve Top",
           imageUrl: "https://i.imgur.com/wP6a2rb.jpg",
@@ -200,6 +211,7 @@ const initialState = {
         },
         item12: {
           id: "item12",
+          collectionId: "men",
           title: "Nike Air",
           subtitle: "Men's Trousers",
           imageUrl: "https://i.imgur.com/vTCELhU.jpg",
@@ -216,6 +228,7 @@ const initialState = {
         },
         item13: {
           id: "item13",
+          collectionId: "men",
           title: "Nike Sportswear",
           subtitle: "Men's Hooded Jacket",
           imageUrl: "https://i.imgur.com/fEWjcsn.jpg",
@@ -233,6 +246,7 @@ const initialState = {
         },
         item14: {
           id: "item14",
+          collectionId: "men",
           title: "Nike Sportswear",
           subtitle: "Men's Woven Shorts",
           imageUrl: "https://i.imgur.com/T0NOTbL.jpg",
@@ -249,6 +263,7 @@ const initialState = {
         },
         item15: {
           id: "item15",
+          collectionId: "men",
           title: "Nike Sportswear Windrunner",
           subtitle: "Men's Jacket",
           imageUrl: "https://i.imgur.com/ILfdJMI.jpg",
@@ -266,6 +281,7 @@ const initialState = {
         },
         item16: {
           id: "item16",
+          collectionId: "men",
           title: "Nike Sportswear",
           subtitle: "Men's Short-Sleeve Top",
           imageUrl: "https://i.imgur.com/tNT0DFN.jpg",
@@ -283,6 +299,7 @@ const initialState = {
         },
         item17: {
           id: "item17",
+          collectionId: "men",
           title: "Nike Sportswear Tech Fleece",
           subtitle: "Men's Full-Zip Hoodie",
           imageUrl: "https://i.imgur.com/5olFldT.jpg",
@@ -299,6 +316,7 @@ const initialState = {
         },
         item18: {
           id: "item18",
+          collectionId: "men",
           title: "Nike Sportswear Tech Fleece",
           subtitle: " Men's Joggers",
           imageUrl: "https://i.imgur.com/pHuZHha.jpg",
@@ -316,6 +334,7 @@ const initialState = {
         },
         item19: {
           id: "item19",
+          collectionId: "men",
           title: "Nike Pro",
           subtitle: "Men's Pullover Hoodie",
           imageUrl: "https://i.imgur.com/yXuN557.jpg",
@@ -333,6 +352,7 @@ const initialState = {
         },
         item20: {
           id: "item20",
+          collectionId: "men",
           title: "Jordan Jumpman Classics HBR",
           subtitle: "Men's Short-Sleeve Crew",
           imageUrl: "https://i.imgur.com/9KDEStW.jpg",
@@ -352,10 +372,11 @@ const initialState = {
     },
     kids: {
       id: "kids",
-      title: "Kids",
+      title: "Kids Clothing",
       items: {
         item21: {
           id: "item21",
+          collectionId: "kids",
           title: "Nike Sportswear",
           subtitle: "Older Kids' (Boys') Fleece Jacket",
           imageUrl: "https://i.imgur.com/Ns809rt.jpg",
@@ -373,12 +394,15 @@ const initialState = {
         },
         item22: {
           id: "item22",
+          collectionId: "kids",
           title: "Nike Sportswear Tech Fleece",
           subtitle: "Older Kids' (Boys') Full-Zip Hoodie",
-          imageUrl: "https://i.imgur.com/4aQMn0A.jpg",
+          imageUrl: "https://i.imgur.com/7Nbzx6Y.jpg",
           price: 74.95,
           images: {
-            image1: "https://i.imgur.com/TebrPfR.jpg",
+            image1: "https://i.imgur.com/VT5V8Ua.jpg",
+            image2: "https://i.imgur.com/ykJbnlZ.jpg",
+            image3: "https://i.imgur.com/4QqzKHd.jpg",
           },
           info:
             "Make the most of chilly days with the Nike Sportswear Tech Fleece Hoodie. This full-zip is all about our innovative premium fleece that's soft, lightweight and warm. Added bonus: There's a zipped pocket on your left sleeve.",
@@ -388,6 +412,7 @@ const initialState = {
         },
         item23: {
           id: "item23",
+          collectionId: "kids",
           title: "Nike Sportswear Tech Fleece",
           subtitle: "Older Kids' (Boys') Trousers",
           imageUrl: "https://i.imgur.com/33dR5pF.jpg",
@@ -404,6 +429,7 @@ const initialState = {
         },
         item24: {
           id: "item24",
+          collectionId: "kids",
           title: "Nike Sportswear Tech Fleece",
           subtitle: "Younder Kids' (Boys') Full-Zip Hoodie",
           imageUrl: "https://i.imgur.com/gHZ03nR.jpg",
@@ -419,6 +445,7 @@ const initialState = {
         },
         item25: {
           id: "item25",
+          collectionId: "kids",
           title: "Nike Sportswear Tech Fleece",
           subtitle: "Baby (0-9M) Full-Zip Overall",
           imageUrl: "https://i.imgur.com/GuYuLHS.jpg",
@@ -432,6 +459,7 @@ const initialState = {
         },
         item26: {
           id: "item26",
+          collectionId: "kids",
           title: "Nike Sportswear",
           subtitle: "Older Kids' T-Shirt",
           imageUrl: "https://i.imgur.com/SJLHNfe.jpg",
@@ -449,6 +477,7 @@ const initialState = {
         },
         item27: {
           id: "item27",
+          collectionId: "kids",
           title: "Nike Sportswear Swoosh",
           subtitle: "Older Kids' (Boys') Full-Zip Hoodie",
           imageUrl: "https://i.imgur.com/a3QGe6d.jpg",
@@ -467,6 +496,7 @@ const initialState = {
 
         item28: {
           id: "item28",
+          collectionId: "kids",
           title: "Nike Sportswear",
           subtitle: "Older Kids' (Boys') Shorts",
           imageUrl: "https://i.imgur.com/y6QMRIH.jpg",
@@ -484,6 +514,7 @@ const initialState = {
         },
         item29: {
           id: "item29",
+          collectionId: "kids",
           title: "Nike Sportswear Swoosh",
           subtitle: "Older Kids' Hoodie",
           imageUrl: "https://i.imgur.com/PwIodal.jpg",
@@ -501,6 +532,7 @@ const initialState = {
         },
         item30: {
           id: "item30",
+          collectionId: "kids",
           title: "Nike Sportswear Swoosh",
           subtitle: "Older Kids' Joggers",
           imageUrl: "https://i.imgur.com/MC1d3DZ.jpg",
@@ -520,10 +552,11 @@ const initialState = {
     },
     menshoes: {
       id: "menshoes",
-      title: "Men's Shoes",
+      title: "Men's Trainers & Shoes",
       items: {
         item31: {
           id: "item31",
+          collectionId: "menshoes",
           title: "Air Max 90 Premium",
           subtitle: "Men's Shoe",
           imageUrl: "https://i.imgur.com/99RuStw.jpg",
@@ -541,6 +574,7 @@ const initialState = {
         },
         item32: {
           id: "item32",
+          collectionId: "menshoes",
           title: "Nike Air Force 1 '07 LV8",
           subtitle: "Men's Shoe",
           imageUrl: "https://i.imgur.com/sXTLVHq.jpg",
@@ -558,8 +592,9 @@ const initialState = {
         },
         item33: {
           id: "item33",
+          collectionId: "menshoes",
           title: "Nike Air Max 97",
-          subtitle: "men's Shoe",
+          subtitle: "Men's Shoe",
           imageUrl: "https://i.imgur.com/k0hh3Ya.jpg",
           price: 149.95,
           images: {
@@ -575,6 +610,7 @@ const initialState = {
         },
         item34: {
           id: "item34",
+          collectionId: "menshoes",
           title: "Nike Blazer Mid Vintage '77",
           subtitle: "Shoe",
           imageUrl: "https://i.imgur.com/YMGrh8v.jpg",
@@ -592,6 +628,7 @@ const initialState = {
         },
         item35: {
           id: "item35",
+          collectionId: "menshoes",
           title: "Nike Blazer Mid '77 Vintage",
           subtitle: "Shoe",
           imageUrl: "https://i.imgur.com/F65N7kL.jpg",
@@ -609,6 +646,7 @@ const initialState = {
         },
         item36: {
           id: "item36",
+          collectionId: "menshoes",
           title: "Nike Blazer Mid Vintage '77",
           subtitle: "Men's Shoe",
           imageUrl: "https://i.imgur.com/wscFoEP.jpg",
@@ -626,6 +664,7 @@ const initialState = {
         },
         item37: {
           id: "item37",
+          collectionId: "menshoes",
           title: "Jordan Zoom '92",
           subtitle: "Men's Shoe",
           imageUrl: "https://i.imgur.com/aJmX8hP.jpg",
@@ -643,6 +682,7 @@ const initialState = {
         },
         item38: {
           id: "item38",
+          collectionId: "menshoes",
           title: "Nike Air Max Plus",
           subtitle: "Men's Shoe",
           imageUrl: "https://i.imgur.com/nJuqKmf.jpg",
@@ -660,6 +700,7 @@ const initialState = {
         },
         item39: {
           id: "item39",
+          collectionId: "menshoes",
           title: "Nike Air Max 90",
           subtitle: "Men's Shoe",
           imageUrl: "https://i.imgur.com/fHM0BrZ.jpg",
@@ -677,6 +718,7 @@ const initialState = {
         },
         item40: {
           id: "item40",
+          collectionId: "menshoes",
           title: "Nike React Infinity Run Flyknit",
           subtitle: "Men's Running Shoe",
           imageUrl: "https://i.imgur.com/pzaZMiB.jpg",
@@ -696,10 +738,11 @@ const initialState = {
     },
     womenshoes: {
       id: "womenshoes",
-      title: "Women's Shoes",
+      title: "Women's Trainers & Shoes",
       items: {
         item41: {
           id: "item41",
+          collectionId: "womenshoes",
           title: "Nike Blazer Mid Vintage '77",
           subtitle: "Women's Shoe",
           imageUrl: "https://i.imgur.com/yWAW13u.jpg",
@@ -717,6 +760,7 @@ const initialState = {
         },
         item42: {
           id: "item42",
+          collectionId: "womenshoes",
           title: "Nike Air Max 90",
           subtitle: "Women's Shoe",
           imageUrl: "https://i.imgur.com/rWmFDaM.jpg",
@@ -734,6 +778,7 @@ const initialState = {
         },
         item43: {
           id: "item43",
+          collectionId: "womenshoes",
           title: "Nike React Vision",
           subtitle: "Women's Shoe",
           imageUrl: "https://i.imgur.com/MvCqjed.jpg",
@@ -751,6 +796,7 @@ const initialState = {
         },
         item44: {
           id: "item44",
+          collectionId: "womenshoes",
           title: "Nike Air Max 90",
           subtitle: "Women's Shoe",
           imageUrl: "https://i.imgur.com/A9S1Ha2.jpg",
@@ -768,6 +814,7 @@ const initialState = {
         },
         item45: {
           id: "item45",
+          collectionId: "womenshoes",
           title: "Nike React Vision",
           subtitle: "Women's Shoe",
           imageUrl: "https://i.imgur.com/FYiZpOg.jpg",
@@ -785,6 +832,7 @@ const initialState = {
         },
         item46: {
           id: "item46",
+          collectionId: "womenshoes",
           title: "Nike Air Zoom SuperRep",
           subtitle: "Women's HIIT Class Shoe",
           imageUrl: "https://i.imgur.com/XlyjMLi.jpg",
@@ -802,6 +850,7 @@ const initialState = {
         },
         item47: {
           id: "item47",
+          collectionId: "womenshoes",
           title: "Nike Air Max 2090",
           subtitle: "Women's Shoe",
           imageUrl: "https://i.imgur.com/1wXsmQ9.jpg",
@@ -819,6 +868,7 @@ const initialState = {
         },
         item48: {
           id: "item48",
+          collectionId: "womenshoes",
           title: "Nike Air Max Verona",
           subtitle: "Women's Shoe",
           imageUrl: "https://i.imgur.com/tI5UTOr.jpg",
@@ -836,6 +886,7 @@ const initialState = {
         },
         item49: {
           id: "item49",
+          collectionId: "womenshoes",
           title: "Nike Air Max 90",
           subtitle: "Women's Shoe",
           imageUrl: "https://i.imgur.com/tHmQgLq.jpg",
@@ -853,6 +904,7 @@ const initialState = {
         },
         item50: {
           id: "item50",
+          collectionId: "womenshoes",
           title: "Nike Air Max 2090",
           subtitle: "Women's Shoe",
           imageUrl: "https://i.imgur.com/0ECAEqp.jpg",
@@ -896,50 +948,59 @@ const shopReducer = (state = initialState, action) => {
         errorMessage: action.payload,
       };
     }
-    case SORT_COLLECTION_BY_VALUE: {
-      const { collectionId, sortOrder } = action.payload;
-      const copyCollection = { ...state.collections[collectionId] };
+    case SORT_COLLECTION_BY_VALUE:
+      {
+        const { collectionId, sortOrder } = action.payload;
+        const copyCollection = { ...state.collections[collectionId] };
 
-      if (sortOrder === "des") {
-        const sortedItemsPrice = Object.values(copyCollection.items).sort(
-          (a, b) => {
-            if (b.price < a.price) return -1;
-            if (b.price > a.price) return 1;
-            return 0;
-          }
-        );
-
-        return {
-          ...state,
-          collections: {
-            ...state.collections,
-            [collectionId]: {
-              ...state.collections[collectionId],
-              items: sortedItemsPrice,
+        if (sortOrder === "des") {
+          const arrayItemsPrice = Object.values(copyCollection.items).sort(
+            (a, b) => {
+              if (b.price < a.price) return -1;
+              if (b.price > a.price) return 1;
+              return 0;
+            }
+          );
+          const convertedToObjectSortedItemsPrice = Object.assign(
+            {},
+            ...arrayItemsPrice.map((object) => ({ [object.id]: object }))
+          );
+          return {
+            ...state,
+            collections: {
+              ...state.collections,
+              [collectionId]: {
+                ...state.collections[collectionId],
+                items: convertedToObjectSortedItemsPrice,
+              },
             },
-          },
-        };
-      } else if (sortOrder === "asc") {
-        const sortedItemsPrice = Object.values(copyCollection.items).sort(
-          (a, b) => {
-            if (a.price < b.price) return -1;
-            if (a.price > b.price) return 1;
-            return 0;
-          }
-        );
+          };
+        } else if (sortOrder === "asc") {
+          const arrayItemsPrice = Object.values(copyCollection.items).sort(
+            (a, b) => {
+              if (a.price < b.price) return -1;
+              if (a.price > b.price) return 1;
+              return 0;
+            }
+          );
+          const convertedToObjectSortedItemsPrice = Object.assign(
+            {},
+            ...arrayItemsPrice.map((object) => ({ [object.id]: object }))
+          );
 
-        return {
-          ...state,
-          collections: {
-            ...state.collections,
-            [collectionId]: {
-              ...state.collections[collectionId],
-              items: sortedItemsPrice,
+          return {
+            ...state,
+            collections: {
+              ...state.collections,
+              [collectionId]: {
+                ...state.collections[collectionId],
+                items: convertedToObjectSortedItemsPrice,
+              },
             },
-          },
-        };
+          };
+        }
       }
-    }
+      break;
     default:
       return state;
   }
