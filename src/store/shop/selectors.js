@@ -2,7 +2,7 @@ import { createSelector } from "reselect";
 
 const selectShop = (state) => state.shop;
 
-export const selectCollections = createSelector(
+export const selectAllCollections = createSelector(
   [selectShop],
   (shop) => shop.collections
 );
@@ -12,15 +12,22 @@ export const selectIsPending = createSelector(
   (shop) => shop.isPending
 );
 
-export const selectCollection = (collectionId) => {
+export const selectCollectionCategory = (collectionId) => {
   return createSelector(
-    [selectCollections],
+    [selectAllCollections],
     (collections) => collections[collectionId]
   );
 };
 
-export const selectCollectionsPreview = createSelector(
-  [selectCollections],
+export const selectCollectionCategoryArray = (collectionItems) =>
+  createSelector([selectAllCollections], () =>
+    Object.keys(collectionItems).map(
+      (collectionName) => collectionItems[collectionName]
+    )
+  );
+
+export const selectAllCollectionsArray = createSelector(
+  [selectAllCollections],
   (collections) =>
     Object.keys(collections).map(
       (collectionName) => collections[collectionName]
